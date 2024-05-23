@@ -2,7 +2,7 @@
   <header class="header">
     <Container class="header__container">
       <Logo orientation="horizontal" bg-color="white" colorful with-text/>
-      <Button color="secondary">
+      <Button class="ml-10" color="secondary">
         <template #left-icon>
           <Icon icon="menu"/>
         </template>
