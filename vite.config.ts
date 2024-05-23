@@ -1,4 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import path from 'path'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -9,6 +11,12 @@ export default defineConfig({
   plugins: [
     vue(),
     VueDevTools(),
+    createSvgIconsPlugin({
+      // Specify the icon folder to be cached
+      iconDirs: [path.resolve(process.cwd(), 'src/shared/icon/icons-svg')],
+      // Specify symbolId format
+      symbolId: 'icon-[dir]-[name]',
+    }),
   ],
   resolve: {
     alias: {
