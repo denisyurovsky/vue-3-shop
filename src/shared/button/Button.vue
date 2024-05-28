@@ -9,7 +9,6 @@
 <script setup lang="ts">
 
 import { computed } from 'vue'
-
 interface Props {
   disabled?: boolean;
   color?: 'primary' | 'secondary' | 'grayscale' | 'error'

@@ -13,6 +13,8 @@
           <Icon height="24" width="24" name="search" />
         </template>
       </Field>
+      <Navigation class="ml-10" :items="navItems" />
+      <UserMenu name="Denzel" :avatar="AvatarPng" class="ml-6" />
     </Container>
   </header>
 </template>
@@ -25,6 +27,15 @@ import Button from '@/shared/button'
 import Icon from '@/shared/icon'
 import VText from '@/shared/text'
 import Field from '@/shared/field'
+import Navigation from '@/features/header/navigation'
+import { reactive } from 'vue'
+import UserMenu from '@/features/header/userMenu'
+import AvatarPng from '@/assets/avatar.png'
+const navItems = reactive([
+  {label: 'Избранное', icon: 'favorite', count: 0, link: '/favorites'},
+  {label: 'Заказы', icon: 'order', count: 0, link: '/orders'},
+  {label: 'Корзина', icon: 'cart', count: 1, link: '/cart'},
+])
 </script>
 
 <style scoped lang="scss">
