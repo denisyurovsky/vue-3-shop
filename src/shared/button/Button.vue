@@ -38,6 +38,10 @@ const classes = computed(() => {
 }
 
 .color {
+  &_primary {
+    background-color: var(--main-primary);
+    color: var(--main-on-primary);
+  }
   &_secondary {
     background-color: var(--main-secondary);
     color: var(--main-on-secondary)

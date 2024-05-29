@@ -41,7 +41,6 @@ const classes = computed(() => {
 
 <style scoped lang="scss">
 .field {
-  width: 100%;
   .right-icon, .left-icon {
     position: absolute;
   }
